@@ -1,6 +1,7 @@
-from pydantic import BaseModel
 from datetime import datetime
-from typing import List, Optional, Dict
+from typing import List, Optional
+
+from pydantic import BaseModel
 
 
 class Vacancy(BaseModel):
@@ -16,5 +17,3 @@ class Vacancy(BaseModel):
     currency: str
     prof_areas: Optional[List]
     required_skills: Optional[List]
-
-

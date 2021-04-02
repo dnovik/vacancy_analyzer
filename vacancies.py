@@ -1,13 +1,14 @@
-import requests
-from settings import BASE_URL
 from typing import Optional
+
+import requests
+
 from areas import get_city
+from settings import BASE_URL
 
 SUFFIX = 'vacancies'
 
 
 def get_vacancies(text: str, city_name: Optional[str]):
-
     if city_name:
         area = get_city(city_name)
 
@@ -23,7 +24,6 @@ def get_vacancies(text: str, city_name: Optional[str]):
 
 
 def get_vacancy(vacancy_id: str):
-    
     url = '/'.join((BASE_URL, SUFFIX, vacancy_id))
     response = requests.get(url).json()
 

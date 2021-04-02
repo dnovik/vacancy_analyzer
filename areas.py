@@ -1,12 +1,13 @@
-import requests
-from settings import BASE_URL
 from typing import Dict
+
+import requests
+
+from settings import BASE_URL
 
 SUFFIX = 'areas'
 
 
 def get_city(name: str) -> Dict:
-
     url = '/'.join((BASE_URL, SUFFIX))
     countries = requests.get(url).json()
 
