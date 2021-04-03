@@ -2,7 +2,7 @@ from typing import Optional
 
 import requests
 
-from areas import get_city
+from hh_api.areas import get_city
 from settings import BASE_URL
 
 SUFFIX = 'vacancies'
