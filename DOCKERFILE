@@ -3,5 +3,6 @@ RUN apt update && apt upgrade
 WORKDIR /vacancy_analyzer
 COPY entrypoint.sh ./
 RUN chmod a+x entrypoint.sh
+RUN pip install -r requirements.txt
 ENTRYPOINT [ "./entrypoint.sh" ]
 CMD [ "ls" ]
