@@ -1,4 +1,7 @@
-FROM ubuntu:latest
-RUN apt-get update && apt-get upgrade
-WORKDIR /usr/src/vacancy_analzer
-COPY . .
+FROM ubuntu:20.04
+RUN apt update && apt upgrade
+WORKDIR /vacancy_analyzer
+COPY entrypoint.sh ./
+RUN chmod a+x entrypoint.sh
+ENTRYPOINT [ "./entrypoint.sh" ]
+CMD [ "ls" ]
